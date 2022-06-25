@@ -1,12 +1,19 @@
 body {
   text-align: center;
-  background-color: #011F3F;
+  background-color: #000000;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+  font-family: sans-serif;
 }
 
 #level-title {
   font-family: 'Press Start 2P', cursive;
   font-size: 3rem;
-  margin:  5%;
+  margin: 5%;
+  margin-top: 2%;
   color: #FEF2BF;
 }
 
@@ -14,15 +21,15 @@ body {
   display: block;
   width: 50%;
   margin: auto;
-
+  margin-top: 10px;
 }
 
 .btn {
-  margin: 25px;
+  margin: 20px;
   display: inline-block;
-  height: 200px;
-  width: 200px;
-  border: 10px solid black;
+  height: 170px;
+  width: 170px;
+  border: 10px solid #FEF2BF;
   border-radius: 20%;
 }
 
@@ -43,8 +50,8 @@ body {
   background-color: blue;
 }
 
-.yellow {
-  background-color: yellow;
+.orange {
+  background-color: orange;
 }
 
 .pressed {
@@ -52,23 +59,74 @@ body {
   background-color: grey;
 }
 
+button{
+  display: none;
+}
 
+footer a{
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: white;
+}
 
 @media (max-width: 480px) {
-  #level-title{
+  #level-title {
     font-size: 1.2rem;
     line-height: 1.5;
   }
 
+  .container {
+    display: flex;
+    width: 25%;
+    height: 25%;
+    margin: 10px;
+    margin-top: 45px;
+  }
 
-.btn{
-  height: 100px;
-  width: 100px;
+  .btn {
+    margin: 15px;
+    display: inline-block;
+    height: 120px;
+    width: 120px;
+    border: 10px solid #FEF2BF;
+    border-radius: 15%;
+  }
+
+  button {
+    display: inline-block;
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+    text-shadow: 2px 2px 1px #666666;
+    font-family: Arial;
+    color: #000000;
+    font-size: 37px;
+    font-weight: 700;
+    background: #FEF2BF;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+    margin-top: 34px;
+    width: 50%;
+  }
+
+  button:hover {
+    background: #010305;
+    background-image: -webkit-linear-gradient(top, #010305, #f5e8b6);
+    background-image: -moz-linear-gradient(top, #010305, #f5e8b6);
+    background-image: -ms-linear-gradient(top, #010305, #f5e8b6);
+    background-image: -o-linear-gradient(top, #010305, #f5e8b6);
+    background-image: linear-gradient(to bottom, #010305, #f5e8b6);
+    text-decoration: none;
+  }
+
+
+footer{
+  margin-top: 25px;
+  text-align:center;
+  margin-left: 10px;
+
 }
-
-
-
-
 
 
 

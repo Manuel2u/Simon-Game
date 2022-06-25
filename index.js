@@ -1,4 +1,4 @@
-var buttonColors = ["red", "blue", "green", "yellow"]
+var buttonColors = ["red", "blue", "green", "orange"]
 
 var gamePattern = [];
 
@@ -57,6 +57,25 @@ $(document).keydown(function(event) {
 });
 
 
+
+$('button').click(function(event) {
+
+  if (!started) {
+
+    $("#level-title").text("Level " + level);
+
+    nextSequence();
+
+    started = true;
+  }
+
+});
+
+if (screen.width < 480) {
+  $("#level-title").text("Press the button to Start")
+}
+
+
 function checkAnswer(currentLevel) {
   if (userClickedPattern[currentLevel] === gamePattern[currentLevel]) {
     console.log("success");
@@ -69,6 +88,19 @@ function checkAnswer(currentLevel) {
 
     }
 
+  } else if (screen.width < 480) {
+    var gameOver = new Audio("sounds/wrong.mp3");
+    gameOver.play();
+
+    $("body").addClass('game-over');
+
+    setTimeout(function() {
+      $("body").removeClass('game-over');
+    }, 200);
+
+    $("h1").text("Game Over, Press the button to Restart");
+
+    startOver();
   } else {
     var gameOver = new Audio("sounds/wrong.mp3");
     gameOver.play();
@@ -85,7 +117,6 @@ function checkAnswer(currentLevel) {
   }
 
 }
-
 
 function playSound(name) {
   switch (name) {
@@ -104,9 +135,9 @@ function playSound(name) {
       red.play();
       break;
 
-    case "yellow":
-      var yellow = new Audio("sounds/yellow.mp3");
-      yellow.play();
+    case "orange":
+      var orange = new Audio("sounds/orange.mp3");
+      orange.play();
       break;
 
     default:
